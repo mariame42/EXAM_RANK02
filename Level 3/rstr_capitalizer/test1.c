@@ -4,6 +4,8 @@ int main(int ac, char **av)
 {
     int i = 0;
     int j = 1;
+    if (ac == 1)
+        write(1, "\n", 1);
     while(ac != 1)
     {
         while (av[j][i])
@@ -21,6 +23,7 @@ int main(int ac, char **av)
             i++;
         }
         write(1, "\n", 1);
+        i = 0;
         j++;
         ac--;
     }
